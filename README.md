@@ -5,7 +5,7 @@ These recommendations should give you assistance to use Vue.js in a progressive 
 The recommendations differ in their importance. Check the following table to get an overview.
 
 Keyword | Description
-------- | --------------------------------------------------------------------------------------------------
+------- | ------------------------------------------------------------------------------------
 Shall   | Shall is used in a sense of must. Ignoring it can result into problems
 May     | May is used in a sense of optional. It doesn't make a difference for the application
 Should  | Should has a higher weight than may. It is the recommend approach
@@ -66,9 +66,9 @@ const Component = () => import('./Component')
 
 If you need to setup up something during one of the hooks upfront, you should define a method instead of writing everything into the hook. With that, you can easily reinvoke the method later if necessary.
 
-## You shall use `Vue.set` and `Vue.delete` to mutate/delete properties
+## You shall use `Vue.set` and `Vue.delete` to mutate/delete properties/array keys
 
-Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties. This is especially necessary when setting or deleting an array index.
+Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties or array keys. This is especially necessary when setting or deleting an array index.
 
 ## You should use Vuex strict mode
 
@@ -86,16 +86,16 @@ Using `deep: true` at a watcher leads to heavy calculations because Vue.js has t
 
 You might find yourself reseting a Vuex state. Instead of setting verbosely every property of the state, define a state constructor instead. To do so, wrap the state into an arrow function and use `Object.assign` to reset the state.
 
-```js
+```javascript
 const stateConstructor = () => ({
-  property: ''
+  entity: ''
 })
 ```
 
 Mutations:
 
-```js
-RESET_PROPERTY (state) {
+```javascript
+RESET_ENTITY (state) {
   Object.assign(state, stateConstructor())
 }
 ```
