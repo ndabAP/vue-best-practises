@@ -2,6 +2,8 @@
 
 These recommendations should give you assistance to use Vue.js in a progressive and future-orientated way. They are focused around the core of the official Vue.js dependencies, that are the [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vue) and [vue](https://github.com/vuejs/vue) itself.
 
+## Guidelines
+
 The recommendations differ in their importance. Check the following table to get an overview.
 
 Keyword | Description
