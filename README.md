@@ -12,11 +12,13 @@ Shall   | Shall is used in a sense of must. Ignoring it can result into problems
 May     | May is used in a sense of optional. It doesn't make a difference for the application
 Should  | Should has a higher weight than may. It is the recommend approach
 
-## You should handle HTTP requests at Vuex actions only
+## Best practises
+
+### You should handle HTTP requests at Vuex actions only
 
 HTTP requests should be independent from components. The underlying protocol, URI or route may change and you have to rewrite code at multiple places. It is better to have API-related operations at a centralized place instead of doing HTTP requests at the component level.
 
-## You shall use getters/setters for your data properties
+### You shall use getters/setters for your data properties
 
 Mutating a property should be as explicit as possible. Violating it could lead to an unwanted property mutation if you need the property as read-only.
 
@@ -56,7 +58,7 @@ getters: {
 }
 ```
 
-## You should use component lazy loading
+### You should use component lazy loading
 
 When you import a component the usual way, it gets loaded upfront, regardless of if it's needed. You can prevent that behavior with a function.
 
@@ -64,27 +66,27 @@ When you import a component the usual way, it gets loaded upfront, regardless of
 const Component = () => import('./Component')
 ```
 
-## You should always define methods instead of cluttering hooks
+### You should always define methods instead of cluttering hooks
 
 If you need to setup up something during one of the hooks upfront, you should define a method instead of writing everything into the hook. With that, you can easily reinvoke the method later if necessary.
 
-## You shall use `Vue.set` and `Vue.delete` to mutate/delete properties/array keys
+### You shall use `Vue.set` and `Vue.delete` to mutate/delete properties/array keys
 
 Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties or array keys. This is especially necessary when setting or deleting an array index.
 
-## You should use Vuex strict mode
+### You should use Vuex strict mode
 
 The Vuex is the centralized state of your application. To reason about state mutations, you must be aware of changes in an exact manner. When the strict mode is enabled and the state is mutated outside of a mutation handler, an error will be thrown.
 
-## You should not use `Vue.parent`
+### You should not use `Vue.parent`
 
 In general, components should be loosely coupled. However, there are situations where components can also be tightly coupled. If you have a dedicated mother-child-relationship, it is perfectly okay to use `Vue.parent` to access the mother component from the child. Nevertheless, if components can stand on their own, you shouldn't use it. It could be that the relationship get's interrupted and the child component is wrapped around another component which makes `Vue.parent` useless.
 
-## You should not use watchers `deep: true`
+### You should not use watchers `deep: true`
 
 Using `deep: true` at a watcher leads to heavy calculations because Vue.js has to recursively check for property changes. It's better to use an explicit getter instead and watch for it.
 
-## You may use a state constructor
+### You may use a state constructor
 
 You might find yourself reseting a Vuex state. Instead of setting verbosely every property of the state, define a state constructor instead. To do so, wrap the state into an arrow function and use `Object.assign` to reset the state.
 
@@ -102,7 +104,7 @@ RESET_ENTITY (state) {
 }
 ```
 
-## You may not always use state managament for a component
+### You may not always use state managament for a component
 
 Most times, a component is seperated, isolated unit of your application. Therefore, there is no need for such a component to be accessible from the outside or the other way around. You can save a lot of state managament if you ask yourself some questions:
 
