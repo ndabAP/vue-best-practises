@@ -99,3 +99,13 @@ RESET_ENTITY (state) {
   Object.assign(state, stateConstructor())
 }
 ```
+
+## You may not always use state managament for a component
+
+Most times, a component is seperated, isolated unit of your application. Therefore, there is no need for such a component to be accessible from the outside or the other way around. You can save a lot of state managament if you ask yourself some questions:
+
+- Do I need the components data or state elsewhere?
+- Does an other component must mutate the components behaviour?
+- Do I need the component elsewhere?
+
+You may end up putting parts of your component into the store and the rest into the component.
