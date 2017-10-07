@@ -42,7 +42,7 @@ computed: {
     },
 
     set (property) {
-      this.$store.state.property = property
+      this.$store.commit('UPDATE_PROPERTY', property) // Always mutate state via a mutator, use Vuex strict mode as stated bellow.
     }
   }
 }
