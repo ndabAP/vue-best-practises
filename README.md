@@ -125,5 +125,5 @@ new Vuex.Store({
     Product: product,
     Basket: basket
   }
-)}
+})
 ```
