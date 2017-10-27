@@ -127,3 +127,23 @@ new Vuex.Store({
   }
 })
 ```
+
+### You shall use pure functions
+
+In Vue.js, many click directives should be handlers. Handlers do a couple of things. They should call other functions instead of combining the whole logic, which can lead to unpure functions with unwanted side effects. It's pretty easy to overlook that. Given a common example:
+
+```js
+setIsVisibleModal (isVisibleModal) {
+  this.isVisibleModal = isVisibleModal
+  if (isVisibleModal === false) this.setIsVisibleModalButton(true)
+}
+```
+
+This function does two things, even so the function name clearly forces you to do only one thing. It's easier and more testable to use a handler instead, like showed here:
+
+```js
+modalHandler (isVisibleModal) {
+  this.setIsVisibleModal(isVisibleModal)
+  if (isVisibleModal === false) this.setIsVisibleModalButton(true)
+}
+```
