@@ -80,7 +80,7 @@ If you need to setup up something during one of the hooks upfront, you should de
 
 ### You shall use `Vue.set` and `Vue.delete` to mutate/delete properties/array keys
 
-Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties or array keys. This is especially necessary when setting or deleting an array index or an object property.
+Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties or array keys. This is especially necessary when setting or deleting an array index or an object property. Please note: This won't be necessary in future versions.
 
 [Back to top](#vuejs-best-practises)
 
