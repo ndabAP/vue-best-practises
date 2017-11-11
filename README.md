@@ -154,30 +154,30 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 
 #### Components
 
-| Entity              | Example           | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|---------------------|-------------------|-------|------|-----|-------|-------|--------|-------|
-| Component file name | SearchBar         | No    | No   | No  | No    | No    | Yes    | No    |
-| Component           | \<search-bar\/\>  | No    | Yes  | No  | No    | No    | No     | No    |
-| Events              | make-user-visible | No    | Yes  | No  | No    | Yes   | No     | No    |
-| Mixin file name     | SearchBarMixin    | No    | No   | No  | No    | No    | Yes    | No    |
-| Mixin               | SearchBar         | No    | No   | No  | No    | No    | Yes    | No    |
-| References          | user-post         | No    | Yes  | No  | No    | No    | No     | No    |
+| Entity              | Example            | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|---------------------|--------------------|-------|------|-----|-------|-------|--------|-------|
+| Component file name | `SearchBar`        | No    | No   | No  | No    | No    | Yes    | No    |
+| Component           | `<search-bar/>`    | No    | Yes  | No  | No    | No    | No     | No    |
+| Events              | `make-user-visible`| No    | Yes  | No  | No    | Yes   | No     | No    |
+| Mixin file name     | `SearchBarMixin`   | No    | No   | No  | No    | No    | Yes    | No    |
+| Mixin               | `SearchBar`        | No    | No   | No  | No    | No    | Yes    | No    |
+| References          | `user-post`        | No    | Yes  | No  | No    | No    | No     | No    |
 
 #### Router
 
-| Entity | Example        | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|--------|----------------|-------|------|-----|-------|-------|--------|-------|
-| Routes | DashboardIndex | No    | No   | No  | No    | No    | Yes    | No    |
+| Entity | Example          | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|--------|------------------|-------|------|-----|-------|-------|--------|-------|
+| Routes | `DashboardIndex` | No    | No   | No  | No    | No    | Yes    | No    |
 
 #### Vuex
 
-| Entity             | Example        | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|--------------------|----------------|-------|------|-----|-------|-------|--------|-------|
-| Module file name   | user.module    | No    | No   | Yes | No    | No    | No     | No    |
-| Module             | User           | No    | No   | No  | No    | No    | Yes    | No    |
-| Mutation file name | user.mutations | No    | No   | Yes | No    | No    | No     | No    |
-| Mutation functions | SET_USER       | No    | No   | No  | Yes   | No    | No     | Yes   |
-| Action file name   | user.actions   | No    | No   | Yes | No    | No    | No     | No    |
-| Action functions   | postUser       | Yes   | No   | No  | No    | No    | No     | No    |
-| State file name    | user.state     | No    | No   | Yes | No    | No    | No     | No    |
-| State properties   | isUserVisible  | Yes   | No   | No  | No    | No    | No     | No    |
+| Entity             | Example          | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|--------------------|------------------|-------|------|-----|-------|-------|--------|-------|
+| Module file name   | `user.module`    | No    | No   | Yes | No    | No    | No     | No    |
+| Module             | `User`           | No    | No   | No  | No    | No    | Yes    | No    |
+| Mutation file name | `user.mutations` | No    | No   | Yes | No    | No    | No     | No    |
+| Mutation functions | `SET_USER`       | No    | No   | No  | Yes   | No    | No     | Yes   |
+| Action file name   | `user.actions`   | No    | No   | Yes | No    | No    | No     | No    |
+| Action functions   | `postUser`       | Yes   | No   | No  | No    | No    | No     | No    |
+| State file name    | `user.state`     | No    | No   | Yes | No    | No    | No     | No    |
+| State properties   | `isUserVisible`  | Yes   | No   | No  | No    | No    | No     | No    |
