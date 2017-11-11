@@ -139,7 +139,7 @@ setIsVisibleModal (isVisibleModal) {
 }
 ```
 
-This function does two things, even so the function name clearly forces you to do only one thing. It's easier and more testable to use a handler instead, like showed here:
+This function does two things, even so the function name clearly coerces you to do only one thing. It's easier and more testable to use a handler instead, like showed here:
 
 ```js
 modalHandler (isVisibleModal) {
@@ -147,3 +147,37 @@ modalHandler (isVisibleModal) {
   if (isVisibleModal === false) this.setIsVisibleModalButton(true)
 }
 ```
+
+### You may follow these naming conventions
+
+Vue.js provides several varying APIs for DOM and state mutations or event communications. Since you decide about the interface names (like methods, events or DOM elements), a consistent naming convention is recommended. 
+
+#### Components
+
+| Entity              | Example           | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|---------------------|-------------------|-------|------|-----|-------|-------|--------|-------|
+| Component file name | SearchBar         | No    | No   | No  | No    | No    | Yes    | No    |
+| Component           | \<search-bar\/\>  | No    | Yes  | No  | No    | No    | No     | No    |
+| Events              | make-user-visible | No    | Yes  | No  | No    | Yes   | No     | No    |
+| Mixin file name     | SearchBarMixin    | No    | No   | No  | No    | No    | Yes    | No    |
+| Mixin               | SearchBar         | No    | No   | No  | No    | No    | Yes    | No    |
+| References          | user-post         | No    | Yes  | No  | No    | No    | No     | No    |
+
+#### Router
+
+| Entity | Example        | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|--------|----------------|-------|------|-----|-------|-------|--------|-------|
+| Routes | DashboardIndex | No    | No   | No  | No    | No    | Yes    | No    |
+
+#### Vuex
+
+| Entity             | Example        | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
+|--------------------|----------------|-------|------|-----|-------|-------|--------|-------|
+| Module file name   | user.module    | No    | No   | Yes | No    | No    | No     | No    |
+| Module             | User           | No    | No   | No  | No    | No    | Yes    | No    |
+| Mutation file name | user.mutations | No    | No   | Yes | No    | No    | No     | No    |
+| Mutation functions | SET_USER       | No    | No   | No  | Yes   | No    | No     | Yes   |
+| Action file name   | user.actions   | No    | No   | Yes | No    | No    | No     | No    |
+| Action functions   | postUser       | Yes   | No   | No  | No    | No    | No     | No    |
+| State file name    | user.state     | No    | No   | Yes | No    | No    | No     | No    |
+| State properties   | isUserVisible  | Yes   | No   | No  | No    | No    | No     | No    |
