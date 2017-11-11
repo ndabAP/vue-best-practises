@@ -18,6 +18,8 @@ Should  | Should has a higher weight than may. It is the recommend approach
 
 HTTP requests should be independent from components. The underlying protocol, URI or route may change and you have to rewrite code at multiple places. It is better to have API-related operations at a centralized place instead of doing HTTP requests at the component level.
 
+[Back to top](#vuejs-best-practises)
+
 ### You shall use getters/setters for your data properties
 
 Mutating a property should be as explicit as possible. Violating it could lead to an unwanted property mutation if you need the property as read-only.
@@ -58,6 +60,8 @@ getters: {
 }
 ```
 
+[Back to top](#vuejs-best-practises)
+
 ### You should use component lazy loading
 
 When you import a component the usual way, it gets loaded upfront, regardless of if it's needed. You can prevent that behavior with a function.
@@ -66,25 +70,37 @@ When you import a component the usual way, it gets loaded upfront, regardless of
 const Component = () => import('./Component')
 ```
 
+[Back to top](#vuejs-best-practises)
+
 ### You should always define methods instead of cluttering hooks
 
 If you need to setup up something during one of the hooks upfront, you should define a method instead of writing everything into the hook. With that, you can easily reinvoke the method later if necessary.
+
+[Back to top](#vuejs-best-practises)
 
 ### You shall use `Vue.set` and `Vue.delete` to mutate/delete properties/array keys
 
 Since Vue.js [can't detect property additions or deletions](https://vuejs.org/v2/guide/reactivity.html#Change-Detection-Caveats), you sould always use `Vue.set` to add and `Vue.delete` to delete properties or array keys. This is especially necessary when setting or deleting an array index or an object property.
 
+[Back to top](#vuejs-best-practises)
+
 ### You should use Vuex strict mode
 
 The Vuex is the centralized state of your application. To reason about state mutations, you must be aware of changes in an exact manner. When the strict mode is enabled and the state is mutated outside of a mutation handler, an error will be thrown.
+
+[Back to top](#vuejs-best-practises)
 
 ### You should not use `Vue.parent`
 
 In general, components should be loosely coupled. However, there are situations where components can also be tightly coupled. If you have a dedicated mother-child-relationship, it is perfectly okay to use `Vue.parent` to access the mother component from the child. Nevertheless, if components can stand on their own, you shouldn't use it. It could be that the relationship get's interrupted and the child component is wrapped around another component which makes `Vue.parent` useless.
 
+[Back to top](#vuejs-best-practises)
+
 ### You should not use watchers `deep: true`
 
 Using `deep: true` at a watcher leads to heavy calculations because Vue.js has to recursively check for property changes. It's better to use an explicit getter instead and watch for it.
+
+[Back to top](#vuejs-best-practises)
 
 ### You may use a state constructor
 
@@ -104,6 +120,8 @@ RESET_ENTITY (state) {
 }
 ```
 
+[Back to top](#vuejs-best-practises)
+
 ### You may not always use state managament for a component
 
 Most times, a component is a seperated, isolated unit of your application. Therefore, there is no need for such a component to be accessible from the outside or the other way around. You can save a lot of state managament if you ask yourself some questions:
@@ -113,6 +131,8 @@ Most times, a component is a seperated, isolated unit of your application. There
 - Do I need the component elsewhere?
 
 You may end up putting parts of your component into the store and the rest into the component.
+
+[Back to top](#vuejs-best-practises)
 
 ### You may use upper-case module names
 
@@ -127,6 +147,8 @@ new Vuex.Store({
   }
 })
 ```
+
+[Back to top](#vuejs-best-practises)
 
 ### You shall use pure functions
 
@@ -147,6 +169,8 @@ modalHandler (isVisibleModal) {
   if (isVisibleModal === false) this.setIsVisibleModalButton(true)
 }
 ```
+
+[Back to top](#vuejs-best-practises)
 
 ### You may follow these naming conventions
 
@@ -182,3 +206,5 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 | Action functions   | `postUser`       | Yes   | No   | No  | No    | No    | No     | No    |
 | State file name    | `user.state`     | No    | No   | Yes | No    | No    | No     | No    |
 | State properties   | `isUserVisible`  | Yes   | No   | No  | No    | No    | No     | No    |
+
+[Back to top](#vuejs-best-practises)
