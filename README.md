@@ -161,7 +161,8 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 | Events              | `make-user-visible`| No    | Yes  | No  | No    | Yes   | No     | No    |
 | Mixin file name     | `SearchBarMixin`   | No    | No   | No  | No    | No    | Yes    | No    |
 | Mixin               | `SearchBar`        | No    | No   | No  | No    | No    | Yes    | No    |
-| References          | `user-post`        | No    | Yes  | No  | No    | No    | No     | No    |
+| Props               | `:is-red="true"`   | No    | Yes  | No  | No    | Yes   | No     | No    |
+| References          | `user-post`        | No    | Yes  | No  | No    | No    | No     | No    |
 
 #### Router
 
