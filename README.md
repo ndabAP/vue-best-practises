@@ -178,33 +178,33 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 
 #### Components
 
-| Entity              | Example            | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|---------------------|--------------------|-------|------|-----|-------|-------|--------|-------|
-| Component file name | `SearchBar`        | No    | No   | No  | No    | No    | Yes    | No    |
-| Component           | `<search-bar/>`    | No    | Yes  | No  | No    | No    | No     | No    |
-| Events              | `make-user-visible`| No    | Yes  | No  | No    | Yes   | No     | No    |
-| Mixin file name     | `SearchBarMixin`   | No    | No   | No  | No    | No    | Yes    | No    |
-| Mixin               | `SearchBar`        | No    | No   | No  | No    | No    | Yes    | No    |
-| Props               | `:is-red="true"`   | No    | Yes  | No  | No    | Yes   | No     | No    |
-| References          | `user-post`        | No    | Yes  | No  | No    | No    | No     | No    |
+| Entity              | Example            |
+|---------------------|--------------------|
+| Component file name | `SearchBar`        |
+| Component           | `<search-bar/>`    |
+| Events              | `make-user-visible`|
+| Mixin file name     | `SearchBarMixin`   |
+| Mixin               | `SearchBar`        |
+| Props               | `:is-red="true"`   |
+| References          | `user-post`        |
 
 #### Router
 
-| Entity | Example          | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|--------|------------------|-------|------|-----|-------|-------|--------|-------|
-| Routes | `DashboardIndex` | No    | No   | No  | No    | No    | Yes    | No    |
+| Entity | Example          |
+|--------|------------------|
+| Routes | `DashboardIndex` |
 
 #### Vuex
 
-| Entity             | Example          | Camel | Dash | Dot | Snake | Lower | Pascal | Upper |
-|--------------------|------------------|-------|------|-----|-------|-------|--------|-------|
-| Module file name   | `user.module`    | No    | No   | Yes | No    | No    | No     | No    |
-| Module             | `User`           | No    | No   | No  | No    | No    | Yes    | No    |
-| Mutation file name | `user.mutations` | No    | No   | Yes | No    | No    | No     | No    |
-| Mutation functions | `SET_USER`       | No    | No   | No  | Yes   | No    | No     | Yes   |
-| Action file name   | `user.actions`   | No    | No   | Yes | No    | No    | No     | No    |
-| Action functions   | `postUser`       | Yes   | No   | No  | No    | No    | No     | No    |
-| State file name    | `user.state`     | No    | No   | Yes | No    | No    | No     | No    |
-| State properties   | `isUserVisible`  | Yes   | No   | No  | No    | No    | No     | No    |
+| Entity             | Example          |
+|--------------------|------------------|
+| Module file name   | `user.module`    |
+| Module             | `User`           |
+| Mutation file name | `user.mutations` |
+| Mutation functions | `SET_USER`       |
+| Action file name   | `user.actions`   |
+| Action functions   | `postUser`       |
+| State file name    | `user.state`     |
+| State properties   | `isUserVisible`  |
 
 [Back to top](#vuejs-best-practises)
