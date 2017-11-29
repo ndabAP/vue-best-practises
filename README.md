@@ -190,9 +190,9 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 
 #### Router
 
-| Entity | Example          |
-|--------|------------------|
-| Routes | `DashboardIndex` |
+| Entity      | Example          |
+|-------------|------------------|
+| Route name | `DashboardIndex` |
 
 #### Vuex
 
