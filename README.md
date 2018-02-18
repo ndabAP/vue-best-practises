@@ -192,7 +192,7 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 
 | Entity      | Example          |
 |-------------|------------------|
-| Route name | `DashboardIndex` |
+| Route name  | `DashboardIndex` |
 
 #### Vuex
 
@@ -206,5 +206,11 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 | Action functions   | `postUser`       |
 | State file name    | `user.state`     |
 | State properties   | `isUserVisible`  |
+
+[Back to top](#vuejs-best-practises)
+
+### You should follow an entity based workflow
+
+Using entities as component names can heavily simplify reasoning about your application. A component is responsible for doing one thing and the name should reflects that. Therefore, you may end up using names like `UserGet`, `ProductPatch` or `ProductPost`. For common logic use mixins. Furthermore, your states should be an image of your server API. Try avoiding abstraction of your API.
 
 [Back to top](#vuejs-best-practises)
