@@ -211,6 +211,10 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 
 ### You should follow an entity based workflow
 
-Using entities as component names can heavily simplify reasoning about your application. A component is responsible for doing one thing and the name should reflects that. Therefore, you may end up using names like `UserGet`, `ProductPatch` or `ProductPost`. For common logic use mixins. Furthermore, your states should be an image of your server API. Try avoiding abstraction of your API.
+Using entities as component names can heavily simplify reasoning about your application. A component is responsible for doing one thing and the name should reflect that. Therefore, you may end up using names like `UserGet`, `ProductPatch` or `ProductPost`. For common logic use mixins. Furthermore, your states should be an image of your server API. Try avoiding abstraction of your API.
 
 [Back to top](#vuejs-best-practises)
+
+### You shall let mothers components handling errors
+
+Consider a product page with a container component holding product components with another subcomponent loading product images. Thus, the responsibility chain goes down from the container component to the product component to the product images component. If there is an error with the product images, let the product component handle it. If the product component crashes, let the container decide what to do. This guarantees that the component with the most knowledge makes decisions.
