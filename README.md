@@ -215,7 +215,7 @@ Using entities as component names can heavily simplify reasoning about your appl
 
 [Back to top](#vuejs-best-practises)
 
-### You shall let mothers components handling errors
+### You shall let mother components handling errors
 
 Consider a product page with a container component holding product components with another subcomponent loading product images. Thus, the responsibility chain goes down from the container component to the product component to the product images component. If there is an error with the product images, let the product component handle it. If the product component crashes, let the container decide what to do. This guarantees that the component with the most knowledge makes decisions.
 
