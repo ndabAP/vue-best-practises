@@ -200,7 +200,7 @@ Vue.js provides several varying APIs for DOM and state mutations or event commun
 |---------------------|--------------------|
 | Component file name | `SearchBar`        |
 | Component           | `<search-bar/>`    |
-| Events              | `makeUserVisible`  |
+| Events              | `make-user-visible`|
 | Mixin file name     | `SearchBarMixin`   |
 | Mixin               | `SearchBarMixin`   |
 | Props               | `:is-red="true"`   |
